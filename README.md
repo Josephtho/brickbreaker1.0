@@ -1,5 +1,5 @@
 # Brickbreaker 1.0
-##[josephthore.me] - [https://github.com/Josephtho/]
+##[http://josephthore.me] - [https://github.com/Josephtho/]
 
 >A little project to learn OOP in Javascript. Please send any critics, words of hate or love to jothore@gmail.com :)
 
