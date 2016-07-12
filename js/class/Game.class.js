@@ -5,7 +5,7 @@ var Game = function(){
 	this.score = 0;
 	this.lives = LIVES;
 	this.win;
-	this.levelNumber = 3;
+	this.levelNumber = 1;
 	this.ball =  new Ball();
 	this.paddle = new Paddle(this.ball);
 	this.bricks = new Bricks();
@@ -54,7 +54,7 @@ Game.prototype.collisionDetection = function() {
             
 
         	//Checking for victory
-          if(this.score == score1 || this.score == score1+score2 || this.score == score1+score2+score3 || this.score > 10) {
+          if(this.score == score1 || this.score == score1+score2 || this.score == score1+score2+score3) {
               return true;
           }
             
@@ -66,7 +66,7 @@ Game.prototype.collisionDetection = function() {
 
 
 Game.prototype.askReplay = function() {
-	if (!this.lives) {
+	if (!this.lives || (this.lives && this.levelNumber == 4)) {
 		$('canvas').click(restartGame);
 	} else {
 		$('canvas').click(this.startNextLevel.bind(this));
